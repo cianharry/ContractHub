@@ -1,7 +1,6 @@
 const functions = require('firebase-functions');
 const firebase = require('firebase-admin');
 const express = require('express');
-const engines = require('consolidate');
 
 // Initialize Firebase
 var config = {

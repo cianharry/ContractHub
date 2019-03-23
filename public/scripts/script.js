@@ -1,21 +1,22 @@
-const userEmail = document.getElementById("inputEmail4");
-const userPass = document.getElementById("inputPassword4");
-const btnSign = document.getElementById("btnSign");
-const auth = firebase.auth();
-function signIn(){
+function logIn(){
 
-    var userEmail = document.getElementById("inputEmail4").value;
-    var userPass = document.getElementById("inputPassword4").value;
+    window.alert("working");
+}
 
-    btnSign.addEventListener('click', e => {
-        const email = userEmail.Value;
-        const pass = userPass.Value;
+(function() {
+    const userEmail = document.getElementById("inputEmail4");
+    const userPass = document.getElementById("inputPassword4");
+    const btnSign = document.getElementById("btnSign");
         
-        //sign in 
-        const promise = auth.signInWithEmailAndPassword(email, pass);
-        promise.catch(e => console.log(e.message));
-      });
-
-    }
+    btnSign.addEventListener('click', e => {
+            const email = userEmail.Value;
+            const pass = userPass.Value;
+            console.log(email);
+            
+            //sign in 
+            const promise = auth.signInWithEmailAndPassword(email, pass);
+            promise.catch(e => console.log(e.message));
+          });
+    })();
 
 
